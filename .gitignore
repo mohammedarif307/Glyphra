@@ -1,0 +1,34 @@
+# ── Dependencies ────────────────────────────
+node_modules/
+**/node_modules/
+
+# ── Environment ─────────────────────────────
+.env
+server/.env
+
+# ── Build output ─────────────────────────────
+client/dist/
+
+# ── Uploads (temporary PDF storage) ─────────
+server/uploads/*
+!server/uploads/.gitkeep
+
+# ── Editor ───────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ── Netlify ──────────────────────────────────
+.netlify/
+
+# ── Render ───────────────────────────────────
+.render/

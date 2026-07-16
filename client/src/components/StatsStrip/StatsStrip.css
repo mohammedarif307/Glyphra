@@ -1,0 +1,41 @@
+/* ── StatsStrip ──────────────────────────────── */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  background: #E7D5BF;
+}
+
+.stat {
+  padding: 2.8rem 3.5rem;
+  border-right: 1px solid var(--border-light);
+}
+
+.stat:last-child { border-right: none; }
+
+.stat-n {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.55rem;
+}
+
+.stat-n span { color: var(--sienna-dark); }
+
+.stat-l {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .stats { grid-template-columns: 1fr; }
+  .stat { border-right: none; border-bottom: 1px solid var(--border-light); padding: 2rem 1.5rem; }
+  .stat:last-child { border-bottom: none; }
+}

@@ -1,0 +1,54 @@
+/* ── ProcessSteps ────────────────────────────── */
+
+.process {
+  background: #F3E8D8;
+  border-top: 1px solid var(--border-light);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 3.5rem;
+}
+
+.process-step {
+  padding-right: 2.5rem;
+  border-right: 1px solid var(--border-light);
+}
+
+.process-step:not(:first-child) { padding-left: 2.5rem; }
+.process-step:last-child { border-right: none; padding-right: 0; }
+
+.step-n {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  margin-bottom: 1.2rem;
+}
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.step-desc {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .process-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem 1.5rem; }
+  .process-step { border-right: none; padding: 0 !important; }
+}
+
+@media (max-width: 540px) {
+  .process-grid { grid-template-columns: 1fr; }
+}

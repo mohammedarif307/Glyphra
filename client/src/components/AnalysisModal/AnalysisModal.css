@@ -1,0 +1,134 @@
+/* ── AnalysisModal ───────────────────────────── */
+
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(24,18,14,0.68);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.25s ease both;
+}
+
+.modal {
+  background: var(--ivory);
+  width: min(560px, 92vw);
+  border: 1px solid var(--border);
+  animation: fadeSlideUp 0.35s var(--ease) both;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-hd {
+  padding: 1.1rem 1.4rem;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.modal-x {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0.2rem 0.4rem;
+}
+
+.modal-x:hover { color: var(--ink); }
+
+.modal-bd {
+  padding: 1.8rem 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-doc {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-status {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  margin-bottom: 1.6rem;
+}
+
+/* Log */
+.alog {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  line-height: 2.1;
+}
+
+.alog-row {
+  display: flex;
+  align-items: baseline;
+  animation: fadeSlideUp 0.3s ease both;
+}
+
+.alog-k {
+  color: var(--ink-soft);
+  min-width: 185px;
+  white-space: nowrap;
+}
+
+.alog-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--border-light);
+  margin: 0 0.6rem 3px;
+}
+
+.alog-v          { color: var(--ink-muted); }
+.alog-v--done    { color: var(--forest); }
+.alog-v--warn    { color: var(--sienna); }
+.alog-v--spin    { color: var(--slate); }
+.alog-v--default { color: var(--ink-muted); }
+
+/* Progress */
+.modal-prog {
+  margin-top: 1.8rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.prog-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem;
+}
+
+.prog-track {
+  height: 2px;
+  background: var(--border-light);
+}
+
+.prog-fill {
+  height: 100%;
+  background: var(--sienna);
+  transition: width 0.5s var(--ease);
+}
